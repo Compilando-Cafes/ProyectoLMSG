@@ -2,6 +2,13 @@
     font-family: 'the_augusta';
     src: url('C:\Users\River\OneDrive\Imágenes\IMÁGENES MÍAS\Trabajo\DAM\Lenguajes de marca\Trabajo grupal web psicodélica\ProyectoLMSG\fonts\the_augusta') format('truetype');
 }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+}
 body {
     font-family: 'the_augusta';
     background: radial-gradient(circle, #ff00ff, #00ffff, #ff0000, #00ff00, #0000ff);
@@ -11,6 +18,12 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+}
+main {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente si es necesario */
 }
 
 @keyframes psychedelic {
@@ -54,4 +67,13 @@ button:hover {
     background: yellow;
     color: red;
     transform: scale(1.2) rotate(5deg);
+}
+
+/* Estilos para el footer */
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia abajo si el contenido es insuficiente */
 }
