@@ -1,51 +1,105 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Queremos tus datos</title>
-    <link rel="stylesheet" href="estilos_formulario.css">
-</html>
-<body>
+    <link rel="stylesheet" href="estilos_formulario.css" />
+  </head>
+  <body>
     <main>
-        <section id="contacto">
-            <h2 id="titulo_formulario">Queremos tus datos</h2>
-            <h3 id="titulo_formulario2">(a saber que hacemos con ellos...)</h3>
-            <form action="" method="POST">
-                <label for="nombre">¿Como te llamas? Tú verdadero nombre.</label><br>
-                <input type="text" id="nombre" name="nombre"><br><br>
+      <!-- Sección de contacto -->
+      <section id="contacto">
+        <h2 id="titulo_formulario">Queremos tus datos</h2>
+        <h3 id="titulo_formulario2">(a saber qué hacemos con ellos...)</h3>
 
-                <label for="email">Pon aquí tu email falso:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+        <!-- Formulario -->
+        <form action="" method="POST">
+          <!-- Campos principales -->
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nombre">¿Cómo te llamas? Tú verdadero nombre.</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Alicia en el pais de las Maravillas" />
+            </div>
+            <div class="form-group">
+              <label for="email">Pon aquí tu email falso:</label>
+              <input type="email" id="email" name="email" required placeholder="email@inventado.xyz" />
+            </div>
+            <div class="form-group">
+              <label for="telefono">¿Tienes teléfono? Nosotros no:</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="123..."/>
+            </div>
+            <div class="form-group">
+              <label for="direccion"
+                >¿Dónde vives? Es por ir a hacerte una visita:</label
+              >
+              <input type="text" id="direccion" name="direccion" placeholder="Casa blanca número 1"/>
+            </div>
+            <div class="form-group">
+              <label for="fecha"
+                >¿Cuándo naciste? Es por si es tu pin de la tarjeta:</label
+              >
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+            <!-- Checkbox -->
+            <div class="form-group">
+              <label for="me_gusta"
+                >Si no te ha gustado la web, desmarca la siguiente
+                casilla:</label
+              >
+              <input
+                type="checkbox"
+                id="me_gusta"
+                name="me_gusta"
+                checked
+                disabled
+              />
+            </div>
 
-                <label for="telefono">¿Tienes teléfono? Nosotros no:</label><br>
-                <input type="tel" id="telefono" name="telefono"><br><br>
+            <!-- Radio buttons -->
+            <div class="form-group">
+                <label>¿Cuánto has disfrutado con esta web?</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" id="opcion1" name="opciones" value="opcion1" checked>
+                        Me he quitado internet y no volveré jamás.
+                    </label>
+                    <label>
+                        <input type="radio" id="opcion2" name="opciones" value="opcion2">
+                        Me he tenido que lavar los ojos después de verla.
+                    </label>
+                    <label>
+                        <input type="radio" id="opcion3" name="opciones" value="opcion3">
+                        He tirado el ordenador por la ventana. Mentira, no tengo ordenador. Ha sido el móvil.
+                    </label>
+                </div>
+            </div>
 
-                <label for="direccion">¿Donde vives? Es por ir a hacerte una visita:</label><br>
-                <input type="text" id="direccion" name="direccion"><br><br>
-
-                <label for="fecha">¿Cuando naciste? No es por nada, solo es por si es tu pin de la tarjeta:</label><br>
-                <input type="date" id="fecha" name="fecha"><br><br>
-
-                <label for="me_gusta">Si no te ha gustado la web, desmarca la siguiente casilla:</label><br>
-                <input type="checkbox" id="me_gusta" name="me_gusta" checked disabled><br><br>
-
-                <label for="¿Cuanto has disfrutado con esta web?"></label><br>
-                <input type="radio" id="opcion1" name="opciones" value="opcion1" checked>
-                <label for="opcion1">Me he quitado internet y no volveré jamás.</label><br>
-                <input type="radio" id="opcion2" name="opciones" value="opcion2">
-                <label for="opcion2">Me he tenido que lavar los ojos después de verla.</label><br>
-                <input type="radio" id="opcion3" name="opciones" value="opcion3">
-                <label for="opcion3">He tirado el ordenador por la ventana. Mentira, no tengo ordenador. Ha sido el móvil.</label><br><br>
-
-                <label for="mensaje">Deja tu mensaje después de oir la señal... beeep:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
-
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
+            <!-- Mensaje -->
+            <div class="form-group">
+              <label for="mensaje"
+                >Deja tu mensaje después de oír la señal... beeep:</label
+              >
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="10"
+                required
+                placeholder="Pon lo que quieras aquí, total, no lo vamos a leer..."
+              ></textarea>
+            </div>
+          </div>
+          <!-- Botón de envío -->
+          <div class="form-group button-container">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
     </main>
 
+    <!-- Pie de página -->
     <footer>
-        <p> 2025. Compilando Cafés.</p>
+      <p>2025. Compilando Cafés.</p>
     </footer>
-</body>
+  </body>
+</html>
