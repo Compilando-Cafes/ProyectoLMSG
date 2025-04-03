@@ -3,47 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Alicia en el País de las Maravillas</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Sobre Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <h1>El Agujero de Alicia</h1>
     </header>
-    <main>
-        <section id="inicio">
-            <h1>Bienvenidos a Nuestra Página Web</h1>
-            <p>Esta es una introducción breve a lo que hace nuestra empresa.</p>
-        </section>
-        <section id="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Información sobre la historia de la empresa, misión, visión, etc.</p>
-        </section>
-        <section id="servicios">
-            <h2>Nuestros Servicios</h2>
-            <div>
-                <h3>Servicio 1</h3>
-                <p>Descripción del servicio 1.</p>
-            </div>
-            <div>
-                <h3>Servicio 2</h3>
-                <p>Descripción del servicio 2.</p>
-            </div>
-        </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Información de cómo contactarnos.</p>
-        </section>
-    </main>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Más Locura</a></li>
+            <li><a href="#">Salir (¿Estás Seguro?)</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <p>"Cada aventura requiere un primer paso" - El Sombrerero Loco</p>
+    </aside>
+
+    <section>
+        <h2>¿Te atreves a caer?</h2>
+        <p>Alicia miró dentro y… ¿Qué encontró? ¿Te atreves a descubrirlo?</p>
+        <button id="boton-locura">No hagas click aquí si no quieres enloquecer</button>
+    </section>
+
     <footer>
-        <p>© 2025 Nombre de la Empresa. Todos los derechos reservados.</p>
+        <p>&copy; 2025 País de las Maravillas. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById("boton-locura").addEventListener("click", function() {
+            window.location.href = "index.html"; // Redirige a la página de tu compañero
+        });
+    </script>
 </body>
 </html>
