@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alicia en el País de las Maravillas</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fuente para el h1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+
+    <!-- Fuente Rubik Wet Paint para secciones destacadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>El Agujero de Alicia</h1>
+        <h1 class="eater-regular">El Agujero de Alicia</h1>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Más Locura</a></li>
-            <li><a href="#">Salir (¿Estás Seguro?)</a></li>
-        </ul>
-    </nav>
 
     <aside>
         <p>"Cada aventura requiere un primer paso" - El Sombrerero Loco</p>
@@ -26,17 +26,24 @@
     <section>
         <h2>¿Te atreves a caer?</h2>
         <p>Alicia miró dentro y… ¿Qué encontró? ¿Te atreves a descubrirlo?</p>
-        <button id="boton-locura">No hagas click aquí si no quieres enloquecer</button>
+        <a href="poema.html"><button id="boton-locura">No hagas click aquí si no quieres enloquecer</button></a>
     </section>
+
+  <!-- Sección principal adaptada para el trabajo grupal -->
+<section class="Seccion2index" id="bienvenida">
+    <article>
+      <h2>Lo que vio Alicia</h2>
+      <p>
+        Un bosque con relojes derretidos, un gato que sonreía sin cuerpo y cartas que jugaban al ajedrez con las sombras.
+        Todo era posible, y nada era lo que parecía. Las palabras flotaban como globos, los pensamientos se escribían en el aire,
+        y cada paso la alejaba más de la lógica... y más cerca de sí misma.
+      </p>
+    </article>
+  </section>
+  
 
     <footer>
         <p>&copy; 2025 Compilando Cafés. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        document.getElementById("boton-locura").addEventListener("click", function() {
-            window.location.href = "index.html"; // Redirige a la página de tu compañero
-        });
-    </script>
-</body>
+</body>   
 </html>
