@@ -58,9 +58,33 @@ main {
 }
 
 header, footer {
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-    padding: 20px;
+    padding: 10px 0; /* reduce la altura */
+    background: radial-gradient(circle at center, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+    text-align: center;
 }
+
+header {
+    padding: 10px 0 !important;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+    text-align: center;
+}
+
+/* Reducir el tamaño del título */
+header h1 {
+    margin: 10px 0 !important;
+    font-size: 2rem; /* o ajústalo como prefieras */
+    line-height: 1.2;
+}
+
+/* Eliminar márgenes de posibles elementos adicionales */
+header blockquote,
+header p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1rem;
+}
+
+
 
 nav {
     background: rgba(0, 0, 0, 0.8); /* Oscurece un poco más el fondo para mejor contraste */
@@ -125,20 +149,20 @@ button:hover {
 }
 
 /* Títulos del formulario */
-#titulo_formulario, #titulo_formulario2 {
+#titulo_formulario {
     text-align: center;
     color: #fff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Rubik Wet Paint', cursive !important;
+    font-size: 1.5rem;
+    letter-spacing: 1hpx;
     margin-bottom: 0px;
-}
-
-#titulo_formulario {
     font-size: 30px;
 }
 
 #titulo_formulario2 {
     font-size: 15px;
     margin-bottom: 20px;
+    font-family: 'Joti One', sans-serif;
 }
 
 /* Diseño del formulario */
@@ -368,12 +392,14 @@ input[type="radio"] {
 }
 
 footer {
+    font-family: 'Joti One', sans-serif;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     width: 100%;
     margin-top: auto;
 }
+
 
 /* Estilos psicodélicos mejorados para la sección de poesía */
 .seccion-poesia {
@@ -420,6 +446,11 @@ footer {
     padding: 0 20px;            /* Espacio interno a los lados */
     font-size: 1.4rem;          /* Tamaño de letra más grande */
 }
+.seccion-poesia h2 {
+    font-size: 2rem;
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
 
 /* Sección de galería */
 .galeria-alicia {
@@ -476,4 +507,72 @@ figcaption {
     margin-top: 10px;
     color: white;
     font-style: italic;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccion-poesia,
+.galeria-alicia,
+#contacto {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.galeria-lista img:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
+#boton-locura {
+    animation: temblor 0.5s infinite alternate;
+}
+
+@keyframes temblor {
+    from { transform: rotate(-2deg); }
+    to { transform: rotate(2deg); }
+}
+
+.Seccion2index p {
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+h1 {
+    animation: aparecer 1.5s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    animation: aparecer 1.5s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav ul li a.active {
+    background-color: #ff00ff;
+    color: black;
+    border-radius: 10px;
 }
