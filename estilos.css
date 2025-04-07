@@ -2,6 +2,7 @@ h1 {
     font-family: 'Eater', cursive; /* Fuente decorativa para el título principal */
     padding-bottom: 20px; /* Añade espacio debajo del título */
 }
+
 h2 {
     font-family: 'Rubik Wet Paint', cursive; /* Fuente artística y expresiva para destacar bloques de texto */
     padding-bottom: 15px; /* Espacio debajo de los subtítulos para separación visual */
@@ -15,6 +16,7 @@ html, body {
     flex-direction: column; /* Coloca el contenido en columna vertical */
 }
 
+
 body {
     font-family: 'Joti One', sans-serif;
     background-image: url('img/fondo2.gif');
@@ -26,8 +28,20 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 0;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
 
 
 main {
@@ -230,11 +244,15 @@ input[type="radio"] {
 }
 
 #contacto {
-    background-color: #ff007f; /* Fondo rosa fuerte */
-    margin: 10px;
-    padding: 20px;
-    border-radius: 40px; /* Bordes redondeados */
+    background: rgba(255, 0, 127, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
+
 
 #titulo_formulario, #titulo_formulario2 {
     text-align: center;
@@ -271,12 +289,14 @@ form label {
 }
 
 form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    background-color: rgba(255,255,255,0.85);
+    border: none;
     border-radius: 20px;
-    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 14px;
 }
+
 
 .button-container {
     display: flex;
@@ -289,15 +309,17 @@ form input, form textarea {
     border-radius: 10px;
     background-color: #fff;
     color: #ff007f;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     border: none;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .button-container input:hover {
-    background-color: #ff007f;
-    color: #ff007f;
+    opacity: 0;
+    visibility: hidden;
 }
+
 
 input[type="checkbox"] {
     width: 20px;
@@ -353,23 +375,32 @@ footer {
     margin-top: auto;
 }
 
-/* Estilos psicodélicos para la sección de poesía (compatibles con todos los navegadores) */
+/* Estilos psicodélicos mejorados para la sección de poesía */
 .seccion-poesia {
-    background-color: #9400D3; /* Púrpura intenso */
-    padding: 20px; /* Espaciado interior */
-    border-radius: 30px; /* Bordes redondeados */
-    margin: 20px; /* Separación con otros elementos */
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro translúcido */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .seccion-poesia blockquote {
-    background: linear-gradient(45deg, #FF69B4, #8A2BE2); /* De rosa a violeta */
-    padding: 20px;
-    border-radius: 20px; /* Bordes redondeados */
-    color: white; /* Texto blanco */
-    font-style: italic; /* Estilo de cita */
+    background: rgba(255, 255, 255, 0.1); /* Capa interior translúcida */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    font-style: italic;
     margin: 0 auto;
-    max-width: 800px; /* Limita el ancho para buena lectura */
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+
 
 .seccion-poesia blockquote footer {
     margin-top: 20px;
@@ -398,11 +429,16 @@ footer {
     margin: 20px; /* Separación con otros elementos */
 }
 .galeria-alicia {
-    background-color: rgba(255, 20, 147, 0.2); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 30px;
     margin: 30px;
     border-radius: 30px;
 }
+
 
 .galeria-alicia h2 {
     font-family: 'Rubik Wet Paint', cursive;
