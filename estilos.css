@@ -1,29 +1,40 @@
-@font-face{
-    font-family: 'the_augusta';
-    src: url('C:\Users\River\OneDrive\Imágenes\IMÁGENES MÍAS\Trabajo\DAM\Lenguajes de marca\Trabajo grupal web psicodélica\ProyectoLMSG\fonts\the_augusta') format('truetype');
+h1 {
+    font-family: 'Eater', cursive; /* Fuente decorativa para el título principal */
+    padding-bottom: 20px; /* Añade espacio debajo del título */
 }
+h2 {
+    font-family: 'Rubik Wet Paint', cursive; /* Fuente artística y expresiva para destacar bloques de texto */
+    padding-bottom: 15px; /* Espacio debajo de los subtítulos para separación visual */
+}
+
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Organiza el contenido en una columna */
+    height: 100%; /* Ocupa el 100% del alto de la ventana del navegador */
+    margin: 0;     /* Elimina el margen por defecto del navegador */
+    padding: 0;    /* Elimina el padding por defecto del navegador */
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Coloca el contenido en columna vertical */
 }
+
 body {
-    font-family: 'the_augusta';
-    background: radial-gradient(circle, #ff00ff, #00ffff, #ff0000, #00ff00, #0000ff);
-    background-size: 400% 400%;
-    animation: psychedelic 10s infinite linear;
+    font-family: 'Joti One', sans-serif;
+    background-image: url('img/fondo2.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     text-align: center;
     margin: 0;
     padding: 0;
 }
+
+
+
 main {
-    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente si es necesario */
+    justify-content: center;
 }
 
 @keyframes psychedelic {
@@ -33,25 +44,44 @@ main {
 }
 
 header, footer {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
     padding: 20px;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.8); /* Oscurece un poco más el fondo para mejor contraste */
+    padding: 10px 20px; /* Añade más padding para dar más espacio */
+    border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para efecto de elevación */
+    margin: 10px; /* Añade margen alrededor del nav para separarlo de otros elementos */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex; /* Organiza los elementos del nav en línea */
+    justify-content: center; /* Centra los elementos en el nav */
 }
 
 nav ul li {
     display: inline;
-    margin: 10px;
+    margin: 0 15px; /* Ajusta el margen entre elementos de la lista */
 }
 
 nav ul li a {
     color: yellow;
     font-size: 18px;
     text-decoration: none;
+    padding: 5px 10px; /* Añade más padding para hacer los enlaces más clicables */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para efectos hover */
 }
+
+nav ul li a:hover {
+    background-color: yellow; /* Cambia el fondo al hacer hover */
+    color: black; /* Cambia el color del texto al hacer hover */
+    border-radius: 5px; /* Bordes redondeados en hover */
+}
+
 
 button {
     background: red;
@@ -61,6 +91,7 @@ button {
     border: none;
     cursor: pointer;
     transition: all 0.3s;
+    margin-top: 20px; /* Añadido para separar de otros elementos */
 }
 
 button:hover {
@@ -198,11 +229,215 @@ input[type="radio"] {
     width: auto; /* Asegura que el tamaño del radio button sea el predeterminado */
 }
 
-/* Estilos para el footer */
+#contacto {
+    background-color: #ff007f; /* Fondo rosa fuerte */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 40px; /* Bordes redondeados */
+}
+
+#titulo_formulario, #titulo_formulario2 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 0px;
+}
+
+#titulo_formulario {
+    font-size: 30px;
+}
+
+#titulo_formulario2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Grid responsivo */
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+form label {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container input {
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #ff007f;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+
+.button-container input:hover {
+    background-color: #ff007f;
+    color: #ff007f;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff007f;
+    margin-right: 10px;
+}
+
+label[for="me_gusta"] {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    accent-color: #ff007f;
+    margin-right: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.radio-group label {
+    display: flex;
+    align-items:center;
+    gap: 5px;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
 footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    margin-top: auto; /* Empuja el footer hacia abajo si el contenido es insuficiente */
+    margin-top: auto;
+}
+
+/* Estilos psicodélicos para la sección de poesía (compatibles con todos los navegadores) */
+.seccion-poesia {
+    background-color: #9400D3; /* Púrpura intenso */
+    padding: 20px; /* Espaciado interior */
+    border-radius: 30px; /* Bordes redondeados */
+    margin: 20px; /* Separación con otros elementos */
+}
+
+.seccion-poesia blockquote {
+    background: linear-gradient(45deg, #FF69B4, #8A2BE2); /* De rosa a violeta */
+    padding: 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    color: white; /* Texto blanco */
+    font-style: italic; /* Estilo de cita */
+    margin: 0 auto;
+    max-width: 800px; /* Limita el ancho para buena lectura */
+}
+
+.seccion-poesia blockquote footer {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    background: #00CED1; /* Color psicodélico para la firma */
+    padding: 10px;
+    border-radius: 15px; /* Bordes redondeados */
+    display: inline-block;
+    color: #000; /* Texto oscuro para contraste */
+}
+
+.Seccion2index p {
+   
+    margin: 0 auto;             /* Centra el párrafo horizontalmente */
+    max-width: 800px;           /* Ancho máximo para añadir márgenes laterales */
+    padding: 0 20px;            /* Espacio interno a los lados */
+    font-size: 1.4rem;          /* Tamaño de letra más grande */
+}
+
+/* Sección de galería */
+.galeria-alicia {
+    background: linear-gradient(45deg, #FF69B4, #8A2BE2); /* De rosa a violeta */
+    padding: 20px;
+    border-radius: 30px; /* Bordes redondeados */
+    margin: 20px; /* Separación con otros elementos */
+}
+.galeria-alicia {
+    background-color: rgba(255, 20, 147, 0.2); /* Fondo semitransparente */
+    padding: 30px;
+    margin: 30px;
+    border-radius: 30px;
+}
+
+.galeria-alicia h2 {
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.galeria-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.galeria-lista li {
+    max-width: 200px;
+    text-align: center;
+}
+
+.galeria-lista img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    transition: transform 0.3s;
+}
+
+.galeria-lista img:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+figcaption {
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
 }

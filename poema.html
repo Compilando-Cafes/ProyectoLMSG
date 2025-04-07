@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alicia en el País de las Maravillas</title>
+
+    <!-- Tus estilos locales -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <h1>El Agujero de Alicia</h1>
+    </header>
+
+    <nav>
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#contacto">Formulario</a></li>
+      </ul>
+  </nav>
+
+    <!-- Añadimos la clase 'seccion-poesia' para aplicar estilos compatibles -->
+    <section class="seccion-poesia">
+      <h2>Poesía</h2>
+      <article>
+          <blockquote>
+              <p>La cara: el loco<br>
+              De la noche a la mañana enloquecí.<br>
+              Y todo en mi vida se torció.</p>
+
+              <p>Todo el mundo se ha apartado de mi lado…<br>
+              todo el mundo ha perdido en mi interés…<br>
+              ¡Dicen que lo veo todo del revés!<br>
+              Y por eso me mantienen encerrado.<br>
+              Vivo vida de cacharro estropeado<br>
+              y envejece mi cerebro del desuso.<br>
+              Y encerrado como un reo, mas confuso…<br>
+              se me trata como a un discapacitado.</p>
+
+              <p>Mis palabras son sonoras pero mudas<br>
+              pues los pocos que las oyen las declinan<br>
+              pues al loco por locura lo confinan<br>
+              al destierro de ser siempre puesto en duda.<br>
+              Y me ponen constrictoras vestiduras<br>
+              dando freno a mi más leve movimiento;<br>
+              mas dejando rienda suelta al sufrimiento<br>
+              pues las cuerdas no constriñen la amargura.</p>
+
+              <p>Y entonces él apareció.<br>
+              Procedente de las simas de mi mente<br>
+              la psicosis ha brotado de mi piel.<br>
+              Esculpido por cinceles de un demente<br>
+              he engendrado a un ser humano… ¡Copia fiel!</p>
+
+              <p>No me presta su atención… ¡Me la regala!<br>
+              Si no acabo una oración… ¡Él la termina!<br>
+              Si algún chiste no caló… ¡Él lo culmina!<br>
+              Y si bien lo culminó… ¡Lo lleva a gala!<br>
+              Ahora sé lo que es amar… ¡Pues él me ama!<br>
+              Me habla con sinceridad… ¡Él no me miente!<br>
+              Él escucha los delirios de un demente<br>
+              cuando hablo y me ando por las ramas.</p>
+
+              <p>Cuando entro en mi aseo acolchado<br>
+              me reemplaza en el espejo su figura<br>
+              y me habla con palabras de ternura…<br>
+              ¡Es tan fácil darle dicha a un desdichado!<br>
+              Es mi amigo imaginario y me asegura<br>
+              que la voz imaginada no es la suya.<br>
+              Que no crea a mi doctor cuando me arguya<br>
+              que su voz es la real y la segura.</p>
+
+              <p>¡Qué bien que vino él!<br>
+              Ahora hay un amigo dentro de mi alma.<br>
+              Gracias por venir… ¡Gracias!</p>
+
+              <!-- Usamos <footer> con <cite> para firmar la poesía -->
+              <footer><cite>Daniel del Campo</cite></footer>
+          </blockquote>
+      </article>
+    </section>
+
+    <!-- Sección de la galería de fotos -->
+    <section class="galeria-alicia">
+      <h2>Los objetos que Alicia encontró</h2>
+      <ul class="galeria-lista">
+        <li>
+          <figure>
+            <img src="img/foto-reloj.jpg" alt="Reloj de bolsillo" />
+            <figcaption>El reloj del Conejo Blanco</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/foto-te.jpg" alt="Taza de té" />
+            <figcaption>Una taza del Té de Locos</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/foto-sombrero.jpg" alt="Sombrero" />
+            <figcaption>El sombrero del Sombrerero</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/foto-cheshire.jpg" alt="Gato de Cheshire" />
+            <figcaption>Una sonrisa en el aire</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/foto-bebeme.jpg" alt="Frasco con etiqueta 'Bébeme'" />
+            <figcaption>El frasco "Bébeme"</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+        
+
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2 id="titulo_formulario">Queremos tus datos</h2>
+        <h3 id="titulo_formulario2">(a saber qué hacemos con ellos...)</h3>
+
+        <!-- Formulario -->
+        <form action="" method="POST">
+          <!-- Campos principales -->
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nombre">¿Cómo te llamas? Tú verdadero nombre.</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Alicia en el pais de las Maravillas" />
+            </div>
+            <div class="form-group">
+              <label for="email">Pon aquí tu email falso:</label>
+              <input type="email" id="email" name="email" required placeholder="email@inventado.xyz" />
+            </div>
+            <div class="form-group">
+              <label for="telefono">¿Tienes teléfono? Nosotros no:</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="123..."/>
+            </div>
+            <div class="form-group">
+              <label for="direccion">¿Dónde vives? Es por ir a hacerte una visita:</label>
+              <input type="text" id="direccion" name="direccion" placeholder="Casa blanca número 1"/>
+            </div>
+            <div class="form-group">
+              <label for="fecha">¿Cuándo naciste? Es por si es tu pin de la tarjeta:</label>
+              <input type="date" id="fecha" name="fecha" />
+            </div>
+            <!-- Checkbox -->
+            <div class="form-group">
+              <label for="me_gusta">Si no te ha gustado la web, desmarca la siguiente casilla:</label>
+              <input type="checkbox" id="me_gusta" name="me_gusta" checked disabled />
+            </div>
+
+            <!-- Radio buttons -->
+            <div class="form-group">
+                <label>¿Cuánto has disfrutado con esta web?</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" id="opcion1" name="opciones" value="opcion1" checked>
+                        Me he quitado internet y no volveré jamás.
+                    </label>
+                    <label>
+                        <input type="radio" id="opcion2" name="opciones" value="opcion2">
+                        Me he tenido que lavar los ojos después de verla.
+                    </label>
+                    <label>
+                        <input type="radio" id="opcion3" name="opciones" value="opcion3">
+                        He tirado el ordenador por la ventana. Mentira, no tengo ordenador. Ha sido el móvil.
+                    </label>
+                </div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+              <label for="mensaje">Deja tu mensaje después de oír la señal... beeep:</label>
+              <textarea id="mensaje" name="mensaje" rows="10" required placeholder="Pon lo que quieras aquí, total, no lo vamos a leer..."></textarea>
+            </div>
+          </div>
+          <!-- Botón de envío -->
+          <div class="form-group button-container">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
+
+    <footer>
+        <p>&copy; 2025 Compilando Cafés. Todos los derechos reservados.</p>
+    </footer>
+</body>   
+</html>
